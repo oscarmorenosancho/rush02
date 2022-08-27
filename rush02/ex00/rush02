@@ -1,0 +1,32 @@
+i = 0
+n = 0
+a = 0
+
+while str[i] != \0  //conta salt linea per saber array
+{   if str[i] == \n  //contador
+		a+2   //array tamany    +2 per que son dos numeros per linea dict principi i final
+		i++ //integrer base augmenta str
+	else
+		i++
+}
+i = 0
+while str[i] != \0 //string
+}
+
+	if str[i] == \n  //conta entre salts de linea per saber linea dict
+		n++ //contador salt de linea
+		ft_guardar(i, n, a)  //funcio guardar posicio salt linea i +1 per saber comencament i final linea dict
+		i++
+	else
+		i++
+}
+ft_guardar(int i, int n, int a) //funcio guardar posicio salt linea i +1 per saber comencament i final linea dict
+
+int[a] num   //array
+
+num[0]= 0  //comencament 1ra linea dict
+num[n]=  i    //salt de linea i ultim digit linea dict
+n++		// seguent digit despres de salt de linea es 1er digit seguent linea dict
+num[n]= i+1		// 1er digit linea dict
+
+return 0
