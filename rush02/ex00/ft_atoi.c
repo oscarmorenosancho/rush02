@@ -1,48 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.c                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omoreno- <omoreno-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 11:52:46 by omoreno-          #+#    #+#             */
-/*   Updated: 2022/08/28 10:22:05 by omoreno-         ###   ########.fr       */
+/*   Created: 2022/08/28 17:22:01 by omoreno-          #+#    #+#             */
+/*   Updated: 2022/08/28 17:23:04 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
+	int	n;
+	int	result;
 
 	i = 0;
-	while (str[i])
+	n = 1;
+	result = 0;
+	while (str[i] <= 32)
 		i++;
-	return (i);
-}
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i])
+	if (str[i] == '-')
 	{
-		dest[i] = src[i];
+		n = -1;
 		i++;
 	}
-	dest[i] = 0;
-	return (dest);
-}
-
-char	*ft_memncpy(const char *src, char *dest, unsigned char size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
+	else if (str[i] == '+')
+		i++;
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
-		dest[i] = src[i];
+		result *= 10;
+		result += str[i] - '0';
 		i++;
 	}
-	return (dest);
+	return (result * n);
 }

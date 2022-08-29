@@ -1,48 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.c                                           :+:      :+:    :+:   */
+/*   dict_item.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omoreno- <omoreno-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 11:52:46 by omoreno-          #+#    #+#             */
-/*   Updated: 2022/08/28 10:22:05 by omoreno-         ###   ########.fr       */
+/*   Created: 2022/08/28 16:01:42 by omoreno-          #+#    #+#             */
+/*   Updated: 2022/08/28 16:06:40 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-unsigned int	ft_strlen(char *str)
+#ifndef DICT_ITEM
+#define DICT_ITEM
+typedef struct
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = 0;
-	return (dest);
-}
-
-char	*ft_memncpy(const char *src, char *dest, unsigned char size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
-}
+    char *key;
+    char *num_name;
+} t_dict_item;
+#endif
